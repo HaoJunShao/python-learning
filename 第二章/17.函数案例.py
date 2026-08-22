@@ -32,6 +32,17 @@
 # print(cou(m))
 
 
+# n = input("请输入单词：")
+# def m(n):
+#     k = 0
+#     for i in n:
+#         if i in "aeiouAEIOU":
+#             k += 1
+#     print(k)
+# m(n)
+
+
+
 # m = int(input("请输入成绩："))
 # def function_a(m):
 #     print(max(m))
