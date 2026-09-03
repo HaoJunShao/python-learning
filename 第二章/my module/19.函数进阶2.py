@@ -9,6 +9,7 @@
 # def calc(x,y,oper):
 #     return oper(x,y)
 # print(calc(114,514,subtract))
+# print(calc(114,514,add))
 
 
 # out_line = lambda : print("-----------")
@@ -25,7 +26,7 @@
 # print(data_list)
 
 
-#计算n的阶乘：
+#计算n的阶乘：阶乘公式：f(n) = f(n-1) * n
 # def func(m):
 #     s = 1
 #     for i in range(1,m+1):
@@ -46,17 +47,17 @@
 案例2
 """
 
-def calc_order_price(*args: tuple[str,int,int],coupon = 0.0,score = 0.0,express = 0.0)->float:
-    total_list = [i[1] * i[2] for i in args]
-    total_price = sum(total_list)
-    if total_price >= 5000 and coupon <= total_price:
-        total_price = total_price - coupon
-    if total_price >= 5000 and score // 100 <= total_price:
-        total_price = total_price - score // 100
-    total_price = total_price + express
-    return total_price
-m = calc_order_price(("手机",9999,2),("耳机",999,1),("平板",4999,3),coupon = 100,score = 3000,express = 9.9)
-print(m)
+# def calc_order_price(*args: tuple[str,int,int],coupon = 0.0,score = 0.0,express = 0.0)->float:
+#     total_list = [i[1] * i[2] for i in args]
+#     total_price = sum(total_list)
+#     if total_price >= 5000 and coupon <= total_price:
+#         total_price = total_price - coupon
+#     if total_price >= 5000 and score // 100 <= total_price:
+#         total_price = total_price - score // 100
+#     total_price = total_price + express
+#     return total_price
+# m = calc_order_price(("手机",9999,2),("耳机",999,1),("平板",4999,3),coupon = 100,score = 3000,express = 9.9)
+# print(m)
 
 
 #开发代码要点：

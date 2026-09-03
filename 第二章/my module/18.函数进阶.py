@@ -3,8 +3,8 @@
 # def func():
 #     num = 2
 #     print(num)
-# func()
-# print(num)
+# func()#num若是出现在函数内部，则仅仅收到函数内部的影响
+# print(num)#本质任没变
 
 # num = 1
 # def func():
@@ -40,24 +40,28 @@
 #     print(min(a))
 # cal_data(1.13,3543534,5435,7878)
 
-def cal_data(*args,**kwargs):
-    """
-
-    :param args: 不定长位置参数
-    :param kwargs:不定长关键字参数
-    :return:
-    """
-    a = max(args)
-    b = min(args)
-    c = sum(args)/len(args)
-    if kwargs.get("round") is not None:
-        c = round(c,kwargs.get("round"))
-    if kwargs.get("print"):
-        print(f"最大值为：{a}，最小值为：{b}，平均值为：{c}")
-
-cal_data(1.13,3543534,5435,7878)
-cal_data(1.13,3543534,5435,7878,print=True,round=2)
-cal_data(1.13,3543534,5435,7878,print=False,round=2)
+# def cal_data(*args,**kwargs):
+#     """
+#
+#     :param args: 不定长位置参数
+#     :param kwargs:不定长关键字参数
+#     :return:
+#     """
+#     a = max(args)
+#     b = min(args)
+#     c = sum(args)/len(args)
+#     if kwargs.get("round") is not None:
+#         c = round(c,kwargs.get("round"))
+#     if kwargs.get("print"):
+#         print(f"最大值为：{a}，最小值为：{b}，平均值为：{c}")
+#     #为什么不用下面这个形式？————代码的健壮性（Robust)
+#     #为了防止error，当round为赋值是用get的话会得到None，而[]则会直接报错！
+#     # if kwargs["round"] is not None:
+#     #     c = round(c, kwargs.get("round"))
+#
+# cal_data(1.13,3543534,5435,7878)
+# cal_data(1.13,3543534,5435,7878,print=True,round=2)
+# cal_data(1.13,3543534,5435,7878,print=False,round=2)
 
 
 # def cal_data(*a):

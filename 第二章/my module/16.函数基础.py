@@ -29,7 +29,7 @@
 # a,b = circle_area_length(5)
 # print(a)
 # print(b)
-# help(circle_area_length)
+# help(circle_area_length) #help:print 出函数的说明文档
 
 
 def function_a():

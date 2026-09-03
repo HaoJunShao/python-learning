@@ -5,6 +5,8 @@
 # d: None = None
 # name: list[str] = ["A","B","C"]
 # henry: dict[str,int] = {"姓名":18}
+# goods: tuple[str,int,int] = ("nihao",4,5)
+# print(goods)
 # name1 = ["A","B","C"]
 
 # def calc(r: float) -> float:
